@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Secret Lodge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#333">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "custom", 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+    <%= render 'layouts/header' %>
+
+    <div class="container">
+
+      <div class="row row-flash">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-0 col-sm-1 col-md-3"></div>
+        <div class="col-12 col-sm-10 col-md-6">
+          <%= yield %>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="footer">
+      <%= render 'layouts/footer' %>
+    </div>
+
+  </body>
+</html>

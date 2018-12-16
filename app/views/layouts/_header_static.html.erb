@@ -1,0 +1,15 @@
+<header class="mb-auto">
+    <div class="inner">
+        <h3 class="masthead-brand"><%= link_to "Secret Lodge", root_url%></h3>
+        <nav class="nav justify-content-center">
+            <% if logged_in? %>
+                <%= link_to "Salute, " + current_user.name + "!", edit_user_path(current_user.id), class: 'nav-link', id: 'salute' %>
+                <%= link_to "New post!", new_post_path, class: 'btn btn-secondary' %>
+                <%= link_to "Log out", logout_path, method: :delete, class: 'nav-link active' %>
+            <% else %>
+                <%= link_to "Log in", login_path, class: 'nav-link active' %>
+            <% end %>
+        </nav>
+    </div>
+</header>
+

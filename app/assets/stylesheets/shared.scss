@@ -1,0 +1,128 @@
+/*
+    Base structure
+*/
+
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-lg {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.btn-secondary{
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+
+/*
+    Forms
+*/
+
+
+.form-control{
+    padding: 0.7rem;
+}
+
+.field_with_errors {
+    .form-control{
+    border-color: #a94442;
+    }
+    .form-control:focus {
+        color: #a94442;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 55, 0.25);
+    }
+}
+
+  
+/*
+* Main
+*/
+main {
+    padding: 2rem;
+    border-radius: 7px;     
+}
+
+.alert {
+    list-style-type: square tye;
+}
+  
+
+/* Footer */
+.github-logo {
+    width: 32px;
+}
+
+#github-logo-light {
+    .github {
+        fill: rgba(255, 255, 255, 0.75);
+    }
+}
+
+#github-logo-light:hover {
+    .github {
+        fill: #fff;
+    }
+}
+
+#github-logo-dark {
+    .github {
+        fill: rgba(0, 0, 0, 0.75);
+    }
+}
+
+#github-logo-dark:hover {
+    .github {
+        fill: #000;
+    }
+}
+
+
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: gray;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
